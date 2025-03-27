@@ -58,12 +58,12 @@ function App() {
   // Se aplica padding solo cuando no hay imagen cargada
   const containerClasses = imageSrc
     ? "border-2 border-dashed border-green-400 rounded cursor-pointer text-center text-white flex items-center justify-center mx-auto"
-    : "border-2 border-dashed border-green-400 p-6 rounded cursor-pointer text-center text-white flex items-center justify-center mx-auto";
+    : "border-2 border-dashed border-green-400 p-10 rounded cursor-pointer text-center text-white flex items-center justify-center mx-auto";
 
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center">
       <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h1 className="text-2xl text-green-400 mb-4 text-center">Redimensionador de Imagen</h1>
+        <h1 className="text-4xl font-bold text-green-400 mb-4 text-center">Image Resizer</h1>
         <div
           style={imageSrc ? { width: `${size}px`, height: `${size}px` } : {}}
           className={containerClasses}
@@ -78,7 +78,7 @@ function App() {
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           ) : (
-            <p className="text-sm">Arrastra y suelta una imagen o haz clic para subirla</p>
+            <p className="text-xl font-bold">Drag & drop an image to rezize</p>
           )}
           <input
             type="file"
@@ -105,7 +105,7 @@ function App() {
             onClick={handleDownload}
             className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
           >
-            Descargar
+            Download
           </button>
         </div>
       </div>
